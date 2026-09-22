@@ -10,11 +10,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://i.ibb.co/S7tzxTNM/658147419-122229424142279238-872551187475089495-n.jpg" />
   <link rel="icon" type="image/jpeg" href="https://i.ibb.co/gZXrYtDq/438099857-4077743825785762-2295350623361509351-n.jpg" />
+  <link rel="preconnect" href="https://i.ibb.co" />
   <link rel="preconnect" href="https://i.ibb.co" crossorigin />
   <link rel="dns-prefetch" href="https://i.ibb.co" />
-  <link rel="preload" as="image" href="https://i.ibb.co/S7tzxTNM/658147419-122229424142279238-872551187475089495-n.jpg" />
-  <link rel="preload" as="image" href="https://i.ibb.co/wNKnyZS1/657474408-122229424334279238-3042902017073234005-n.jpg" />
-  <link rel="preload" as="image" href="https://i.ibb.co/RppZ0nJq/658854533-122229424400279238-5429830172467950599-n.jpg" />
+  <link rel="preload" as="image" href="https://i.ibb.co/S7tzxTNM/658147419-122229424142279238-872551187475089495-n.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="https://i.ibb.co/wNKnyZS1/657474408-122229424334279238-3042902017073234005-n.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="https://i.ibb.co/RppZ0nJq/658854533-122229424400279238-5429830172467950599-n.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="https://i.ibb.co/hpnnZhf/669718369-122231230826279238-7210708977908867493-n.jpg" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -837,13 +839,14 @@
       position: relative;
       border-radius: var(--radius-md);
       overflow: hidden;
-      background-color: #e2ddd4;
+      background-color: #ded9cf;
       border: 1px solid var(--color-cream-border);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
       cursor: pointer;
       aspect-ratio: 4 / 3;
-      transition: var(--transition);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
       transform: translateZ(0);
+      opacity: 1 !important;
     }
 
     /* Asymmetric grid distribution for items */
@@ -1535,11 +1538,11 @@
           </p>
         </div>
 
-        <!-- ASYMMETRIC GRID WITH IMMEDIATE EAGER LOADING -->
+        <!-- ASYMMETRIC GRID WITH HIGH-PERFORMANCE PROGRESSIVE LOADING -->
         <div class="gallery-grid" id="gallery-container">
           <!-- 1 -->
-          <div class="gallery-item col-6 fade-in-up" data-full="https://i.ibb.co/S7tzxTNM/658147419-122229424142279238-872551187475089495-n.jpg">
-            <img src="https://i.ibb.co/S7tzxTNM/658147419-122229424142279238-872551187475089495-n.jpg" alt="Wycinka drzewa i usuwanie gałęzi w Zgierzu" loading="eager" decoding="async" />
+          <div class="gallery-item col-6" data-full="https://i.ibb.co/S7tzxTNM/658147419-122229424142279238-872551187475089495-n.jpg">
+            <img src="https://i.ibb.co/S7tzxTNM/658147419-122229424142279238-872551187475089495-n.jpg" alt="Wycinka drzewa i usuwanie gałęzi w Zgierzu" loading="eager" decoding="async" fetchpriority="high" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1548,8 +1551,8 @@
           </div>
 
           <!-- 2 -->
-          <div class="gallery-item col-3 fade-in-up" data-full="https://i.ibb.co/wNKnyZS1/657474408-122229424334279238-3042902017073234005-n.jpg">
-            <img src="https://i.ibb.co/wNKnyZS1/657474408-122229424334279238-3042902017073234005-n.jpg" alt="Ścinanie drzew na posesji" loading="eager" decoding="async" />
+          <div class="gallery-item col-3" data-full="https://i.ibb.co/wNKnyZS1/657474408-122229424334279238-3042902017073234005-n.jpg">
+            <img src="https://i.ibb.co/wNKnyZS1/657474408-122229424334279238-3042902017073234005-n.jpg" alt="Ścinanie drzew na posesji" loading="eager" decoding="async" fetchpriority="high" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1558,8 +1561,8 @@
           </div>
 
           <!-- 3 -->
-          <div class="gallery-item col-3 fade-in-up" data-full="https://i.ibb.co/RppZ0nJq/658854533-122229424400279238-5429830172467950599-n.jpg">
-            <img src="https://i.ibb.co/RppZ0nJq/658854533-122229424400279238-5429830172467950599-n.jpg" alt="Oczyszczanie terenu z pni" loading="eager" decoding="async" />
+          <div class="gallery-item col-3" data-full="https://i.ibb.co/RppZ0nJq/658854533-122229424400279238-5429830172467950599-n.jpg">
+            <img src="https://i.ibb.co/RppZ0nJq/658854533-122229424400279238-5429830172467950599-n.jpg" alt="Oczyszczanie terenu z pni" loading="eager" decoding="async" fetchpriority="high" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1568,8 +1571,8 @@
           </div>
 
           <!-- 4 -->
-          <div class="gallery-item col-4 fade-in-up" data-full="https://i.ibb.co/hpnnZhf/669718369-122231230826279238-7210708977908867493-n.jpg">
-            <img src="https://i.ibb.co/hpnnZhf/669718369-122231230826279238-7210708977908867493-n.jpg" alt="Porządkowanie i cięcie drewna" loading="eager" decoding="async" />
+          <div class="gallery-item col-4" data-full="https://i.ibb.co/hpnnZhf/669718369-122231230826279238-7210708977908867493-n.jpg">
+            <img src="https://i.ibb.co/hpnnZhf/669718369-122231230826279238-7210708977908867493-n.jpg" alt="Porządkowanie i cięcie drewna" loading="eager" decoding="async" fetchpriority="high" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1578,7 +1581,7 @@
           </div>
 
           <!-- 5 -->
-          <div class="gallery-item col-4 fade-in-up" data-full="https://i.ibb.co/pjxrS33f/669800373-122231230874279238-887089950334110732-n.jpg">
+          <div class="gallery-item col-4" data-full="https://i.ibb.co/pjxrS33f/669800373-122231230874279238-887089950334110732-n.jpg">
             <img src="https://i.ibb.co/pjxrS33f/669800373-122231230874279238-887089950334110732-n.jpg" alt="Wycinka drzew z podnośnika" loading="eager" decoding="async" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
@@ -1588,7 +1591,7 @@
           </div>
 
           <!-- 6 -->
-          <div class="gallery-item col-4 fade-in-up" data-full="https://i.ibb.co/0VMkWvMg/669287927-122231230916279238-2653172588507418051-n.jpg">
+          <div class="gallery-item col-4" data-full="https://i.ibb.co/0VMkWvMg/669287927-122231230916279238-2653172588507418051-n.jpg">
             <img src="https://i.ibb.co/0VMkWvMg/669287927-122231230916279238-2653172588507418051-n.jpg" alt="Przycinanie gałęzi w koronie" loading="eager" decoding="async" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
@@ -1598,8 +1601,8 @@
           </div>
 
           <!-- 7 -->
-          <div class="gallery-item col-6 fade-in-up" data-full="https://i.ibb.co/PZC9Ngmj/669612011-122231230964279238-1770583109505465961-n.jpg">
-            <img src="https://i.ibb.co/PZC9Ngmj/669612011-122231230964279238-1770583109505465961-n.jpg" alt="Usuwanie potężnego drzewa w Zgierzu" loading="eager" decoding="async" />
+          <div class="gallery-item col-6" data-full="https://i.ibb.co/PZC9Ngmj/669612011-122231230964279238-1770583109505465961-n.jpg">
+            <img src="https://i.ibb.co/PZC9Ngmj/669612011-122231230964279238-1770583109505465961-n.jpg" alt="Usuwanie potężnego drzewa w Zgierzu" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1608,8 +1611,8 @@
           </div>
 
           <!-- 8 -->
-          <div class="gallery-item col-6 fade-in-up" data-full="https://i.ibb.co/ppzXD2S/670487421-122231231018279238-220556699775717384-n.jpg">
-            <img src="https://i.ibb.co/ppzXD2S/670487421-122231231018279238-220556699775717384-n.jpg" alt="Porządkowanie i przygotowanie działki" loading="eager" decoding="async" />
+          <div class="gallery-item col-6" data-full="https://i.ibb.co/ppzXD2S/670487421-122231231018279238-220556699775717384-n.jpg">
+            <img src="https://i.ibb.co/ppzXD2S/670487421-122231231018279238-220556699775717384-n.jpg" alt="Porządkowanie i przygotowanie działki" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1618,8 +1621,8 @@
           </div>
 
           <!-- 9 -->
-          <div class="gallery-item col-4 fade-in-up" data-full="https://i.ibb.co/LzM0pRDP/669811979-122231231066279238-4660944363188290854-n.jpg">
-            <img src="https://i.ibb.co/LzM0pRDP/669811979-122231231066279238-4660944363188290854-n.jpg" alt="Precyzyjne cięcie pni piłą spalinową" loading="eager" decoding="async" />
+          <div class="gallery-item col-4" data-full="https://i.ibb.co/LzM0pRDP/669811979-122231231066279238-4660944363188290854-n.jpg">
+            <img src="https://i.ibb.co/LzM0pRDP/669811979-122231231066279238-4660944363188290854-n.jpg" alt="Precyzyjne cięcie pni piłą spalinową" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1628,8 +1631,8 @@
           </div>
 
           <!-- 10 -->
-          <div class="gallery-item col-4 fade-in-up" data-full="https://i.ibb.co/fGzYr1xp/669910814-122231231114279238-8357157733751302174-n.jpg">
-            <img src="https://i.ibb.co/fGzYr1xp/669910814-122231231114279238-8357157733751302174-n.jpg" alt="Rąbanie drewna i formowanie polan" loading="eager" decoding="async" />
+          <div class="gallery-item col-4" data-full="https://i.ibb.co/fGzYr1xp/669910814-122231231114279238-8357157733751302174-n.jpg">
+            <img src="https://i.ibb.co/fGzYr1xp/669910814-122231231114279238-8357157733751302174-n.jpg" alt="Rąbanie drewna i formowanie polan" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1638,8 +1641,8 @@
           </div>
 
           <!-- 11 -->
-          <div class="gallery-item col-4 fade-in-up" data-full="https://i.ibb.co/S74mc7Xb/704149745-122235604490279238-5114257489121540119-n.jpg">
-            <img src="https://i.ibb.co/S74mc7Xb/704149745-122235604490279238-5114257489121540119-n.jpg" alt="Praca zespołu w terenie" loading="eager" decoding="async" />
+          <div class="gallery-item col-4" data-full="https://i.ibb.co/S74mc7Xb/704149745-122235604490279238-5114257489121540119-n.jpg">
+            <img src="https://i.ibb.co/S74mc7Xb/704149745-122235604490279238-5114257489121540119-n.jpg" alt="Praca zespołu w terenie" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1648,8 +1651,8 @@
           </div>
 
           <!-- 12 -->
-          <div class="gallery-item col-6 fade-in-up" data-full="https://i.ibb.co/60RZvYJ9/702084860-122235604532279238-6395629768669610413-n.jpg">
-            <img src="https://i.ibb.co/60RZvYJ9/702084860-122235604532279238-6395629768669610413-n.jpg" alt="Cięcie niebezpiecznych konarów nad posesją" loading="eager" decoding="async" />
+          <div class="gallery-item col-6" data-full="https://i.ibb.co/60RZvYJ9/702084860-122235604532279238-6395629768669610413-n.jpg">
+            <img src="https://i.ibb.co/60RZvYJ9/702084860-122235604532279238-6395629768669610413-n.jpg" alt="Cięcie niebezpiecznych konarów nad posesją" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1658,8 +1661,8 @@
           </div>
 
           <!-- 13 -->
-          <div class="gallery-item col-6 fade-in-up" data-full="https://i.ibb.co/tTcyHkck/703307708-122235604688279238-8364773283110038287-n.jpg">
-            <img src="https://i.ibb.co/tTcyHkck/703307708-122235604688279238-8364773283110038287-n.jpg" alt="Załadunek gałęzi do wywozu" loading="eager" decoding="async" />
+          <div class="gallery-item col-6" data-full="https://i.ibb.co/tTcyHkck/703307708-122235604688279238-8364773283110038287-n.jpg">
+            <img src="https://i.ibb.co/tTcyHkck/703307708-122235604688279238-8364773283110038287-n.jpg" alt="Załadunek gałęzi do wywozu" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1668,8 +1671,8 @@
           </div>
 
           <!-- 14 -->
-          <div class="gallery-item col-3 fade-in-up" data-full="https://i.ibb.co/9mXCqXnT/703397065-122235604736279238-7282808810859144165-n.jpg">
-            <img src="https://i.ibb.co/9mXCqXnT/703397065-122235604736279238-7282808810859144165-n.jpg" alt="Karczowanie terenu ogrodowego" loading="eager" decoding="async" />
+          <div class="gallery-item col-3" data-full="https://i.ibb.co/9mXCqXnT/703397065-122235604736279238-7282808810859144165-n.jpg">
+            <img src="https://i.ibb.co/9mXCqXnT/703397065-122235604736279238-7282808810859144165-n.jpg" alt="Karczowanie terenu ogrodowego" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1678,8 +1681,8 @@
           </div>
 
           <!-- 15 -->
-          <div class="gallery-item col-3 fade-in-up" data-full="https://i.ibb.co/XkkX32cq/703646405-122235604796279238-2555112799133802840-n.jpg">
-            <img src="https://i.ibb.co/XkkX32cq/703646405-122235604796279238-2555112799133802840-n.jpg" alt="Formowanie drzew i krzewów" loading="eager" decoding="async" />
+          <div class="gallery-item col-3" data-full="https://i.ibb.co/XkkX32cq/703646405-122235604796279238-2555112799133802840-n.jpg">
+            <img src="https://i.ibb.co/XkkX32cq/703646405-122235604796279238-2555112799133802840-n.jpg" alt="Formowanie drzew i krzewów" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1688,8 +1691,8 @@
           </div>
 
           <!-- 16 -->
-          <div class="gallery-item col-3 fade-in-up" data-full="https://i.ibb.co/35Jb9rQX/705277393-122235604838279238-4366186903894183897-n.jpg">
-            <img src="https://i.ibb.co/35Jb9rQX/705277393-122235604838279238-4366186903894183897-n.jpg" alt="Przycinanie korony drzewa" loading="eager" decoding="async" />
+          <div class="gallery-item col-3" data-full="https://i.ibb.co/35Jb9rQX/705277393-122235604838279238-4366186903894183897-n.jpg">
+            <img src="https://i.ibb.co/35Jb9rQX/705277393-122235604838279238-4366186903894183897-n.jpg" alt="Przycinanie korony drzewa" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1698,8 +1701,8 @@
           </div>
 
           <!-- 17 -->
-          <div class="gallery-item col-3 fade-in-up" data-full="https://i.ibb.co/MDQ98PLV/703098302-122235604880279238-369941281958012642-n.jpg">
-            <img src="https://i.ibb.co/MDQ98PLV/703098302-122235604880279238-369941281958012642-n.jpg" alt="Usunięcie pni z posesji" loading="eager" decoding="async" />
+          <div class="gallery-item col-3" data-full="https://i.ibb.co/MDQ98PLV/703098302-122235604880279238-369941281958012642-n.jpg">
+            <img src="https://i.ibb.co/MDQ98PLV/703098302-122235604880279238-369941281958012642-n.jpg" alt="Usunięcie pni z posesji" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1708,8 +1711,8 @@
           </div>
 
           <!-- 18 -->
-          <div class="gallery-item col-4 fade-in-up" data-full="https://i.ibb.co/svXvNvC3/703386350-122235604922279238-5887672861038865372-n.jpg">
-            <img src="https://i.ibb.co/svXvNvC3/703386350-122235604922279238-5887672861038865372-n.jpg" alt="Porządkowanie i przygotowanie drewna opałowego" loading="eager" decoding="async" />
+          <div class="gallery-item col-4" data-full="https://i.ibb.co/svXvNvC3/703386350-122235604922279238-5887672861038865372-n.jpg">
+            <img src="https://i.ibb.co/svXvNvC3/703386350-122235604922279238-5887672861038865372-n.jpg" alt="Porządkowanie i przygotowanie drewna opałowego" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1718,8 +1721,8 @@
           </div>
 
           <!-- 19 -->
-          <div class="gallery-item col-4 fade-in-up" data-full="https://i.ibb.co/wFKkFNfz/702837652-122235604964279238-689863632729360887-n.jpg">
-            <img src="https://i.ibb.co/wFKkFNfz/702837652-122235604964279238-689863632729360887-n.jpg" alt="Działka po wyczyszczeniu i wycince" loading="eager" decoding="async" />
+          <div class="gallery-item col-4" data-full="https://i.ibb.co/wFKkFNfz/702837652-122235604964279238-689863632729360887-n.jpg">
+            <img src="https://i.ibb.co/wFKkFNfz/702837652-122235604964279238-689863632729360887-n.jpg" alt="Działka po wyczyszczeniu i wycince" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1728,8 +1731,8 @@
           </div>
 
           <!-- 20 -->
-          <div class="gallery-item col-4 fade-in-up" data-full="https://i.ibb.co/Pzz9Dzfz/703173105-122235605006279238-1898149079767324409-n.jpg">
-            <img src="https://i.ibb.co/Pzz9Dzfz/703173105-122235605006279238-1898149079767324409-n.jpg" alt="Zaawansowane prace ogrodowe" loading="eager" decoding="async" />
+          <div class="gallery-item col-4" data-full="https://i.ibb.co/Pzz9Dzfz/703173105-122235605006279238-1898149079767324409-n.jpg">
+            <img src="https://i.ibb.co/Pzz9Dzfz/703173105-122235605006279238-1898149079767324409-n.jpg" alt="Zaawansowane prace ogrodowe" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1738,8 +1741,8 @@
           </div>
 
           <!-- 21: FULL WIDTH FEATURE (SPAN 12 DESKTOP, SPAN 2 MOBILE) -->
-          <div class="gallery-item col-12 fade-in-up" data-full="https://i.ibb.co/VGgr2Qx/703098301-122235605054279238-871423673102877779-n.jpg">
-            <img src="https://i.ibb.co/VGgr2Qx/703098301-122235605054279238-871423673102877779-n.jpg" alt="Ścinka drzewa w trudnym terenie w Zgierzu" loading="eager" decoding="async" />
+          <div class="gallery-item col-12" data-full="https://i.ibb.co/VGgr2Qx/703098301-122235605054279238-871423673102877779-n.jpg">
+            <img src="https://i.ibb.co/VGgr2Qx/703098301-122235605054279238-871423673102877779-n.jpg" alt="Ścinka drzewa w trudnym terenie w Zgierzu" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1748,8 +1751,8 @@
           </div>
 
           <!-- 22 -->
-          <div class="gallery-item col-6 fade-in-up" data-full="https://i.ibb.co/PvJwTBvK/475419177-122167120370279238-3759806149855847238-n.jpg">
-            <img src="https://i.ibb.co/PvJwTBvK/475419177-122167120370279238-3759806149855847238-n.jpg" alt="Prace ogrodnicze i wycinka drzew Zgierz" loading="eager" decoding="async" />
+          <div class="gallery-item col-6" data-full="https://i.ibb.co/PvJwTBvK/475419177-122167120370279238-3759806149855847238-n.jpg">
+            <img src="https://i.ibb.co/PvJwTBvK/475419177-122167120370279238-3759806149855847238-n.jpg" alt="Prace ogrodnicze i wycinka drzew Zgierz" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1758,8 +1761,8 @@
           </div>
 
           <!-- 23 -->
-          <div class="gallery-item col-6 fade-in-up" data-full="https://i.ibb.co/Q7SJRkk8/475308657-122166838340279238-956623845005199055-n.jpg">
-            <img src="https://i.ibb.co/Q7SJRkk8/475308657-122166838340279238-956623845005199055-n.jpg" alt="Bezpieczna wycinka drzew z podnośnika" loading="eager" decoding="async" />
+          <div class="gallery-item col-6" data-full="https://i.ibb.co/Q7SJRkk8/475308657-122166838340279238-956623845005199055-n.jpg">
+            <img src="https://i.ibb.co/Q7SJRkk8/475308657-122166838340279238-956623845005199055-n.jpg" alt="Bezpieczna wycinka drzew z podnośnika" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1768,8 +1771,8 @@
           </div>
 
           <!-- 24 -->
-          <div class="gallery-item col-3 fade-in-up" data-full="https://i.ibb.co/G6jJs7x/475792989-122166836948279238-6777150196518779500-n.jpg">
-            <img src="https://i.ibb.co/G6jJs7x/475792989-122166836948279238-6777150196518779500-n.jpg" alt="Cięcie i przygotowanie drewna na posesji" loading="eager" decoding="async" />
+          <div class="gallery-item col-3" data-full="https://i.ibb.co/G6jJs7x/475792989-122166836948279238-6777150196518779500-n.jpg">
+            <img src="https://i.ibb.co/G6jJs7x/475792989-122166836948279238-6777150196518779500-n.jpg" alt="Cięcie i przygotowanie drewna na posesji" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1778,8 +1781,8 @@
           </div>
 
           <!-- 25 -->
-          <div class="gallery-item col-3 fade-in-up" data-full="https://i.ibb.co/mFzTXrPy/475769354-122166836192279238-8939058054459630107-n.jpg">
-            <img src="https://i.ibb.co/mFzTXrPy/475769354-122166836192279238-8939058054459630107-n.jpg" alt="Porządkowanie i wywóz urobku po wycince" loading="eager" decoding="async" />
+          <div class="gallery-item col-3" data-full="https://i.ibb.co/mFzTXrPy/475769354-122166836192279238-8939058054459630107-n.jpg">
+            <img src="https://i.ibb.co/mFzTXrPy/475769354-122166836192279238-8939058054459630107-n.jpg" alt="Porządkowanie i wywóz urobku po wycince" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1788,8 +1791,8 @@
           </div>
 
           <!-- 26 -->
-          <div class="gallery-item col-3 fade-in-up" data-full="https://i.ibb.co/DfWQxjC2/474803996-122165649602279238-3626932056690877384-n.jpg">
-            <img src="https://i.ibb.co/DfWQxjC2/474803996-122165649602279238-3626932056690877384-n.jpg" alt="Usuwanie suchych konarów i pielęgnacja koron" loading="eager" decoding="async" />
+          <div class="gallery-item col-3" data-full="https://i.ibb.co/DfWQxjC2/474803996-122165649602279238-3626932056690877384-n.jpg">
+            <img src="https://i.ibb.co/DfWQxjC2/474803996-122165649602279238-3626932056690877384-n.jpg" alt="Usuwanie suchych konarów i pielęgnacja koron" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -1798,8 +1801,8 @@
           </div>
 
           <!-- 27 -->
-          <div class="gallery-item col-3 fade-in-up" data-full="https://i.ibb.co/9HqFK0z9/474474620-122165684234279238-7105774088002827126-n.jpg">
-            <img src="https://i.ibb.co/9HqFK0z9/474474620-122165684234279238-7105774088002827126-n.jpg" alt="Karczowanie terenu i przygotowanie działki" loading="eager" decoding="async" />
+          <div class="gallery-item col-3" data-full="https://i.ibb.co/9HqFK0z9/474474620-122165684234279238-7105774088002827126-n.jpg">
+            <img src="https://i.ibb.co/9HqFK0z9/474474620-122165684234279238-7105774088002827126-n.jpg" alt="Karczowanie terenu i przygotowanie działki" loading="lazy" decoding="async" fetchpriority="low" />
             <div class="gallery-overlay">
               <div class="gallery-zoom-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg>
@@ -2220,10 +2223,39 @@
         'https://i.ibb.co/DfWQxjC2/474803996-122165649602279238-3626932056690877384-n.jpg',
         'https://i.ibb.co/9HqFK0z9/474474620-122165684234279238-7105774088002827126-n.jpg'
       ];
-      realizationPhotoUrls.forEach(function (url) {
-        var preloader = new Image();
-        preloader.src = url;
-      });
+      // Intelligent background pre-buffering: preloads remaining photos in idle batches without competing with above-the-fold assets
+      function scheduleBackgroundPreload() {
+        var queue = realizationPhotoUrls.slice(6);
+        function loadNextBatch() {
+          if (queue.length === 0) return;
+          var batch = queue.splice(0, 3);
+          batch.forEach(function (url) {
+            var img = new Image();
+            img.decoding = 'async';
+            img.src = url;
+          });
+          if (queue.length > 0) {
+            if ('requestIdleCallback' in window) {
+              requestIdleCallback(function () {
+                setTimeout(loadNextBatch, 120);
+              });
+            } else {
+              setTimeout(loadNextBatch, 200);
+            }
+          }
+        }
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadNextBatch);
+        } else {
+          setTimeout(loadNextBatch, 250);
+        }
+      }
+
+      if (document.readyState === 'complete') {
+        scheduleBackgroundPreload();
+      } else {
+        window.addEventListener('load', scheduleBackgroundPreload);
+      }
 
       // 3. Image Modal / Lightbox
       var lightbox = document.getElementById('lightbox');
